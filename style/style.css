@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Russo One", sans-serif;
+  background-image: url(/ДЗ1Таймер/img/aron-visuals-BXOXnQ26B7o-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.containerDate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerDate .dateForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 484px;
+  box-sizing: border-box;
+  margin-top: 123px;
+}
+.containerDate h3 {
+  font-size: 23px;
+}
+.containerDate .choiceDate {
+  margin-top: 13px;
+}
+.containerDate .calendar {
+  background-color: transparent;
+  border: solid 1px black;
+  font-size: 17px;
+}
+.containerDate button {
+  font-family: "Russo One", sans-serif;
+  font-size: 26px;
+  height: 55px;
+  background-color: rgba(40, 23, 0, 0);
+  border: none;
+}
+.containerDate button:hover {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .timer {
+  display: grid;
+  grid-template-columns: 230px 230px 230px 230px;
+  margin-top: 88px;
+  margin-bottom: 65px;
+  align-items: baseline;
+  gap: 66px;
+}
+.container .timer .time {
+  font-family: "Russo One", sans-serif;
+  width: 230px;
+  height: 343px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 77px;
+}
+.container .timer .title {
+  display: flex;
+  justify-content: center;
+  font-size: 23px;
+}
+.container .btn {
+  display: grid;
+  grid-template-columns: 230px 230px 230px;
+  align-items: baseline;
+  gap: 66px;
+}
+.container .btn button {
+  font-family: "Russo One", sans-serif;
+  font-size: 35px;
+  height: 55px;
+  background-color: rgba(40, 23, 0, 0);
+  border: none;
+}
+.container .btn button:hover {
+  cursor: pointer;
+  text-transform: lowercase;
+}/*# sourceMappingURL=style.css.map */
