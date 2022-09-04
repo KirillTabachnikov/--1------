@@ -1,18 +1,28 @@
 const path = require('path');
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { resolve } = require('path');
 
 module.exports = {
-    entery: './script/main.js',
+    entry: './script/main.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'main.[contenthash].js'
+        filename: 'index.[contenthash].js'
     },
-    // module: {
-    //     rules: [
-    //         {
-    //             test: /\.(png|jpeg|gif|mp3)$/i,
-    //             loader: 'file-loader',
-    //         }
-    //     ]
-    // }
+    module: {
+        rules: [
+            {
+                test: /\.(jpeg|png|mp3|gif|jpg)$/i,
+                loader: 'file-loader',
+            },
+            {
+                test: /\.css$/i,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+            }
+        ]
+    },
+    plugins: [
+        new MiniCssExtractPlugin(),
+        new HtmlWebpackPlugin({ template: resolve(__dirname, 'index.html') })
+    ]
 }
