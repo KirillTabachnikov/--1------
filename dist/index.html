@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>DateTimer</title>
+<script defer src="index.1f5fbaa23c2c216f7ee4.js"></script></head>
+
+<body>
+    <div class="containerDate">
+        <form class="dateForm" id="datecalc">
+            <h3>Калькулятор дат</h3>
+            <label class="choiceDate">
+                <strong>Первая дата:</strong>
+                <input class="calendar" type="date" name="firstDate" />
+            </label>
+            <label class="choiceDate">
+                <strong>Вторая дата:</strong>
+                <input class="calendar" type="date" name="secondDate" />
+            </label>
+            <button type="submit">Расчитать промежуток</button>
+            <p id="datecalc__result"></p>
+        </form>
+    </div>
+
+    <div class="container">
+        <div class="timer">
+            <div class="timer__block">
+                <div class="time hour">00</div>
+                <div class="title">Часы</div>
+            </div>
+
+            <div class="timer__block">
+                <div class="time minute">00</div>
+                <div class="title">Минуты</div>
+            </div>
+
+            <div class="timer__block">
+                <div class="time second">00</div>
+                <div class="title">Секунды</div>
+            </div>
+
+            <div class="timer__block">
+                <div class="time milisecond">00</div>
+                <div class="title">Милисекунды</div>
+            </div>
+
+        </div>
+        <div class="btn">
+            <button class="start">START</button>
+            <button class="pause">PAUSE</button>
+            <button class="stop">STOP</button>
+        </div>
+    </div>
+    <script src="/script/timer.js"></script>
+    <script src="/script/main.js" type="module"></script>
+</body>
+
+</html>
